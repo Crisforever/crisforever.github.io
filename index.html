@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crisforever</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/82b9ac6028.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <nav class="bg-gradient-to-r from-blue-900 to-slate-900" x-data="{ open: false}">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button x-on:click="open = true" type="button"
+            class="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-orange-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
+          <div class="flex flex-shrink-0 items-center">
+            <h1 class="text-white italic font-bold text-xl">Crisforever</h1>
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+
+
+              <a href="#" class="text-white rounded-md px-3 py-2 text-sm font-medium"><i
+                  class="fa-brands fa-github"></i></a>
+
+              <a href="#" class="text-white rounded-md px-3 py-2 text-sm font-medium"> <i
+                  class="fa-brands fa-whatsapp"></i></a>
+
+              <a href="#" class="text-white rounded-md px-3 py-2 text-sm font-medium"> <i
+                  class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div x-show="open" x-on:click.away="open = false" class="sm:hidden relative top-0" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2 flex justify-center items-center flex-col">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-white" -->
+
+
+        <a href="#" class="text-white block rounded-md px-3 py-2 text-base font-medium"> <i
+            class="fa-brands fa-github"></i></a>
+
+        <a href="#" class="text-white block rounded-md px-3 py-2 text-base font-medium"> <i
+            class="fa-brands fa-whatsapp"></i></a>
+
+        <a href="#" class="text-white block rounded-md px-3 py-2 text-base font-medium"> <i
+            class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Seccion de header -->
+
+  <header class=" bg-gradient-to-r from-blue-900 to-slate-900 flex flex-col lg:flex-row-reverse items-center">
+    <img src="./assets/hand-coding-animate.svg" alt="" class="w-[20rem] mx-auto sm:w-[23rem] lg:w-[32rem] xl:w-[30rem] xl:mt-14">
+    <div class="lg:flex lg:items-start lg:flex-col lg:justify-start lg:flex-wrap">
+      <h1 class="w-[90%] mx-auto text-3xl font-bold text-white mb-4 text-center  lg:text-left xl:text-left xl:text-4xl">
+        Bienvenidos a mi portafolio</h1>
+      <p class=" text-md  text-slate-200 w-11/12 mx-auto sm:w-[50%] lg:w-[90%] ">Soy desarrollador web frontend, me
+        interesa el diseño UI / UX y aprender
+        C++ ; Me llamo Cristian Rojas residente actual de Colombia, me ofrezco con las siguientes tecnologias debajo de
+        este texto.</p>
+      <p class="w-[90%] mx-auto text-lg font-semibold text-gray-400 mt-4 text-center lg:text-left"><span
+          class="hover:text-white hover:transition-all hover:underline hover:underline-offset-8 text-center text-sm sm:text-lg ">Tailwind</span>
+        / <span
+          class="hover:text-white hover:transition-all hover:underline hover:underline-offset-8 text-center text-sm sm:text-lg ">Sass</span>
+        / <span
+          class="hover:text-white hover:transition-all hover:underline hover:underline-offset-8 text-center text-sm sm:text-lg ">Typescript</span>
+        /
+        <span
+          class="hover:text-white hover:transition-all hover:underline hover:underline-offset-8 text-center text-sm sm:text-lg ">Node.js</span>
+        /
+        <span
+          class="hover:text-white hover:transition-all hover:underline hover:underline-offset-8 text-center text-sm sm:text-lg ">React.js</span>
+      </p>
+    </div>
+  </header>
+
+  <section class="bg-gradient-to-r from-blue-900 to-slate-900 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="mb-36 text-3xl font-bold text-white">Proyectos</h2>
+      <div class="mt-10">
+
+        <div class="mt-36">
+          <div class="bg-transparent shadow overflow-hidden sm:rounded-lg">
+            <div class="px-4 py-5 sm:px-6">
+              <h3 class="text-lg leading-6 font-medium text-slate-50">
+                PyE Home
+              </h3>
+              <p class="mt-5 max-w-2xl text-sm text-white">
+                Este es un proyecto para una comunidad de programadores en discord,
+                el proyecto se encuentra en constante desarollo cerrado y privado,
+                en su momento es un home page.
+              </p>
+            </div>
+            <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
+              <dl class="sm:divide-y sm:divide-gray-200">
+                <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 sm:py-5">
+                  <dt class="text-sm font-medium text-white">
+                    Tecnologías utilizadas
+                  </dt>
+                  <dd class="mt-1 text-sm text-slate-200 sm:mt-0 sm:col-span-2">
+                    HTML , CSS
+                  </dd>
+                </div>
+                <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 sm:py-5">
+                  <dt class="text-sm font-medium text-white">
+                    Enlace al proyecto
+                  </dt>
+                  <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                    <a href="https://github.com/Crisforever/PyE-Dashboard"
+                      class="text-blue-600 hover:text-blue-800">https://github.com/Crisforever/PyE-Dashboard</a>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-36">
+          <div class="bg-transparent shadow overflow-hidden sm:rounded-lg">
+            <div class="px-4 py-5 sm:px-6">
+              <h3 class="text-lg leading-6 font-medium text-slate-50">
+                Feid Page
+              </h3>
+              <p class="mt-5 max-w-2xl text-sm text-white">
+                Este es un example page de practica con tailwind ,
+                usando un poco de Javascript para la dinamica.
+              </p>
+            </div>
+            <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
+              <dl class="sm:divide-y sm:divide-gray-200">
+                <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 sm:py-5">
+                  <dt class="text-sm font-medium text-white">
+                    Tecnologías utilizadas
+                  </dt>
+                  <dd class="mt-1 text-sm text-slate-200 sm:mt-0 sm:col-span-2">
+                    Tailwind , Javascript
+                  </dd>
+                </div>
+                <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 sm:py-5">
+                  <dt class="text-sm font-medium text-white">
+                    Enlace al proyecto
+                  </dt>
+                  <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                    <a href="https://github.com/Crisforever/feid"
+                      class="text-blue-600 hover:text-blue-800">https://github.com/Crisforever/feid</a>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-36">
+          <div class="bg-transparent shadow overflow-hidden sm:rounded-lg">
+            <div class="px-4 py-5 sm:px-6">
+              <h3 class="text-lg leading-6 font-medium text-slate-50">
+                Facebook Clon Phishing
+              </h3>
+              <p class="mt-5 max-w-2xl text-sm text-white">
+                Esta es una pagina intentando replicar
+                el inicio de sesion de facebook para fines
+                educativos sobre el Phishing.
+              </p>
+            </div>
+            <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
+              <dl class="sm:divide-y sm:divide-gray-200">
+                <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 sm:py-5">
+                  <dt class="text-sm font-medium text-white">
+                    Tecnologías utilizadas
+                  </dt>
+                  <dd class="mt-1 text-sm text-slate-200 sm:mt-0 sm:col-span-2">
+                    HTML , CSS
+                  </dd>
+                </div>
+                <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 sm:py-5">
+                  <dt class="text-sm font-medium text-white">
+                    Enlace al proyecto
+                  </dt>
+                  <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                    <a href="https://github.com/Crisforever/feid"
+                      class="text-blue-600 hover:text-blue-800">https://github.com/Crisforever/feid</a>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-r from-blue-900 to-slate-900 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-white mt-32">Contacto</h2>
+      <p class="mt-4 text-slate-50">¡Me encantaría saber de ti! Puedes contactarme a través de este formulario.</p>
+      <div class="mt-10">
+        
+        <div class="mt-36 mb-56 w-1/2 mx-auto">
+          <form  action="https://formspree.io/f/meqwrrdz" method="POST" class="grid grid-cols-1 gap-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-white mb-5 ">
+                Nombre
+              </label>
+              <div class="mt-1">
+                <input type="text" name="name" id="name" autocomplete="given-name" class="py-2 px-3 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+              </div>
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-white mb-5 ">
+                Correo electrónico
+              </label>
+              <div class="mt-1">
+                <input id="email" name="email" type="email" autocomplete="email" class="py-2 px-3 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+              </div>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-white mb-5 ">
+                Mensaje
+              </label>
+              <div class="mt-1">
+                <textarea id="message" name="message" rows="4" class="py-2 px-3 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"></textarea>
+              </div>
+            </div>
+            <div>
+              <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                Enviar mensaje
+              </button>
+            </div>
+          </form>
+        </div>
+        
+
+      </div>
+    </div>
+  </section>
+  
+  <footer class="bg-gradient-to-r from-blue-900 to-slate-900 py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+      <a href="https://www.instagram.com/cristian_ubn/" target="_blank" class="text-white  mx-2">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/+573229110034" target="_blank" class="text-white  mx-2">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="https://github.com/Crisforever" target="_blank" class="text-white  mx-2">
+        <i class="fa-brands fa-github"></i>
+      </a>
+
+      <a href="https://www.reddit.com/u/Prior-Struggle-838?utm_medium=android_app&utm_source=share" target="_blank" class="text-white  mx-2">
+        <i class="fa-brands fa-reddit"></i>
+      </a>
+
+      <a href="https://www.facebook.com/profile.php?id=100072588503637" target="_blank" class="text-white  mx-2">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-white text-sm mt-2">© 2023 Todos los derechos reservados | Cristian Rojas</p>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

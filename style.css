@@ -1,0 +1,17 @@
+::-webkit-scrollbar {
+
+    width: 0.1px;
+
+}
+
+a > i {
+
+    font-size: 1.7rem;
+    margin: 0.3rem;
+    
+}
+
+a > i:hover {
+
+    color: #F97316;
+}
