@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap');
+
+
+:root {
+    background-image: url('./public/bg.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Esto permite que la imagen se mantenga fija en dispositivos móviles */
+}
+
+/* Añade un estilo adicional para dispositivos móviles si es necesario */
+@media (max-width: 768px) { /* Puedes ajustar el valor según tus necesidades */
+    :root {
+        background-size: 100% cover;
+    }
+}
+
+body {
+
+    font-family: 'Karla', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+
+   
+
+    .container {
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem;
+        background: #1b1a1ab6;
+        border-radius: 3rem;
+        
+        .c-image {
+
+            width: 15rem;
+
+            img {
+
+                width: 100%;
+                height: auto;
+                border-radius: 2rem;
+            }
+
+        }
+
+        .c-text {
+
+            margin: 0.5rem;
+            h2 , p {
+
+                margin: 0;
+                padding: 0;
+                color: white;
+            }
+
+            h2 {
+
+                color: rgba(255, 255, 255, 0.918);
+                font-size: 1.3rem;
+            }
+
+            p {
+
+                color: rgba(255, 255, 255, 0.774);
+                font-size: 0.9rem;
+            }
+        }
+            .c-buttons {
+                margin: 0.5rem 0 0.2rem 0;
+
+                button {
+
+                    background: none;
+                    color: transparent;
+                    border: none;
+                }
+                i {
+                    color:  rgba(122, 102, 102, 0.804);;
+                 
+                    font-size: 2rem;
+                }
+
+                i:hover {
+                    color:  rgba(197, 187, 187, 0.804);;
+                    transition: 1s;
+                    cursor: pointer;
+                }
+            }
+}
+
+}
+
+
+
+.hidden {
+
+    display: none;
+}
+::-webkit-scrollbar {
+
+    width: 0.1px;
+    visibility: hidden;
+}
