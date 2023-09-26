@@ -5,12 +5,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; /* Esto permite que la imagen se mantenga fija en dispositivos móviles */
+  overflow: hidden;
 }
 
 /* Añade un estilo adicional para dispositivos móviles si es necesario */
 @media (max-width: 768px) { /* Puedes ajustar el valor según tus necesidades */
   :root {
     background-size: 100% cover;
+    overflow: hidden;
   }
 }
 body {
