@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi IP facil</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <link rel="shortcut icon" href="./SVG.png">
+</head>
+<body>
+    <main>
+        <div class="c-preload" id="inicio">
+            <h1 id="t-input">Ingresa un apodo</h1>
+            <div class="c-input">
+                <form action="">
+
+                    <input type="text" id="input" value="" required placeholder="Example: John Green"  pattern="[A-Za-z]{4,}" title="Enter your alias here, length min four words">
+                    <input type="submit" class="s-input" value="Send"></input>
+                </form>
+                </div>
+        </div>
+        <section id="contenido">
+            <article>
+                <h2 class="tittle">Bienvenido <span id="name"></span></h2>
+                <p>Tu dirección IP es: <span id="ip"></span></p>
+                <p>País: <span id="country"></span></p>
+                <p>Código de País: <span id="countryCode"></span></p>
+                <p>Región: <span id="region"></span></p>
+                <p>Nombre de la Región: <span id="regionName"></span></p>
+                <p>Ciudad: <span id="city"></span></p>
+                <p>Código Postal: <span id="zip"></span></p>
+                <p>Latitud: <span id="lat"></span></p>
+                <p>Longitud: <span id="lon"></span></p>
+                <p>Zona Horaria: <span id="timezone"></span></p>
+                <p>ISP: <span id="isp"></span></p>
+                <p>Organización: <span id="org"></span></p>
+                <p>AS: <span id="as"></span></p>
+                <p>Consulta: <span id="query"></span></p>
+            </article>
+            <article>
+
+                <h3>Información del dispositivo y navegador</h3>
+                <p>User-Agent: <span id="userAgent"></span></p>
+                <p>Idioma: <span id="idioma"></span></p>
+                <p>Resolucion: <span id="resolucion"></span></p>
+                <p>Sistema operativo: <span id="sistemaOperativo"></span></p>
+                <p>Tipo de dispositivo: <span id="tipoDeDispositivo"></span></p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
