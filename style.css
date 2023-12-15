@@ -1,0 +1,119 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap");
+:root {
+  background-image: url("./bg.gif");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  background-attachment: fixed; /* Esto permite que la imagen se mantenga fija en dispositivos móviles */
+}
+
+/* Añade un estilo adicional para dispositivos móviles si es necesario */
+@media (max-width: 768px) { /* Puedes ajustar el valor según tus necesidades */
+  :root {
+    background-size: 100% cover;
+  }
+}
+body {
+  font-family: "Karla", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+body .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 1rem 0 0 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  background: rgba(27, 26, 26, 0.7137254902);
+  border-radius: 2rem;
+}
+body .container .c-image {
+  width: 18rem;
+}
+
+body .container .c-text {
+  margin: 0.5rem;
+}
+body .container .c-text h2, body .container .c-text p {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+body .container .c-text h2 {
+  color: rgba(255, 255, 255, 0.918);
+  font-size: 1rem;
+}
+body .container .c-text p {
+  color: rgba(255, 255, 255, 0.774);
+  font-size: 0.9rem;
+}
+body .container .c-buttons {
+  margin: 0.5rem 0 0.2rem 0;
+}
+body .container .c-buttons button {
+  background: none;
+  color: transparent;
+  border: none;
+}
+body .container .c-buttons i {
+  color: rgba(56, 56, 56, 0.555);
+  font-size: 2rem;
+}
+body .container .c-buttons i:hover {
+  color: rgba(255, 255, 255, 0.804);
+  transition: 1s;
+  cursor: pointer;
+}
+
+video {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 1.2rem;
+  }
+
+
+::-webkit-scrollbar {
+  width: 0.1px;
+  visibility: hidden;
+}
+
+body .container .c-image {
+    position: relative;
+    border-radius: 1.8rem;
+  }
+  
+  body .container .c-image progress {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 93%;
+    height: 0.3rem; /* Altura de la barra de reproducción */
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0.274); /* Color de fondo de la barra de reproducción */
+    border: 1px rgba(0, 0, 0, 0.192) solid;
+    border-radius: 1rem;
+  }
+  
+  body .container .c-image progress::-webkit-progress-bar {
+    background-color: #ffffff00;
+
+  }
+  
+  body .container .c-image progress::-webkit-progress-value {
+    background-color: #6d63f7; /* Color de la barra de reproducción */
+    
+  }

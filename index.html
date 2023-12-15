@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>De parte de cris</title>
+    <script src="https://kit.fontawesome.com/82b9ac6028.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        
+        <div class="container">
+            <div class="c-image">
+                <video id="video" preload="auto">
+                    <source src="./video.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <progress id="progressBar" value="0" max="100"></progress>
+            </div>
+            <div class="c-text">
+                <h2>Sin mirar las señales</h2>
+                <p>Rels B</p>
+            </div>
+            <div class="c-buttons">
+                <button id="playPauseBtn"><i class="fa-solid fa-play"></i></button>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var video = document.getElementById('video');
+            var progressBar = document.getElementById('progressBar');
+            var playPauseBtn = document.getElementById('playPauseBtn');
+
+            playPauseBtn.addEventListener('click', function () {
+                if (video.paused) {
+                    video.play();
+                    playPauseBtn.innerHTML = '<i class="fa-solid fa-pause" ></i>';
+                } else {
+                    video.pause();
+                    playPauseBtn.innerHTML = '<i class="fa-solid fa-play" ></i>';
+                }
+            });
+
+            video.addEventListener('timeupdate', function () {
+                var value = (video.currentTime / video.duration) * 100;
+                progressBar.value = value;
+            });
+
+            progressBar.addEventListener('click', function (e) {
+                var percent = e.offsetX / this.offsetWidth;
+                video.currentTime = percent * video.duration;
+            });
+        });
+    </script>
+</body>
+</html>
